@@ -55,7 +55,7 @@ function StudentProfile({firstName, lastName, company, average, skill, email, av
              <p className="details">{gradeavg}%</p> 
              {tag}
              <input className="details" type="text" value={createTag} placeholder="Add new Tag"   onKeyUp={(e) => addTags(e)} onChange={(e)=>setCreatetag(e.target.value)} />
-             <div className="scores" style={{display: expand && id  ? "block" : "none" }}>
+             <div className="scores" style={{display: expand ? "block" : "none" }}>
                  {scores}
              </div>
         </div>
