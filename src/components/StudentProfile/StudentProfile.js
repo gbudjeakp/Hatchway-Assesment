@@ -7,7 +7,7 @@ function StudentProfile({firstName, lastName, company, average, skill, email, av
     const [tags, setTags] = useState([])
 
 
-    //Maps through the tags array and dispalys any added atgs
+    //Maps through the tags array and dispalys any added tags
     const tag = tags.map((i, id)=>{return(<p className="tags" key={id}>{i}</p>)})
        
 
@@ -15,7 +15,7 @@ function StudentProfile({firstName, lastName, company, average, skill, email, av
     const gradeavg = average.reduce((total, grade) => total += parseInt(grade), 0) / average.length 
 
     //Here, We will map the average scores and display them in a P tag
-    const scores = average.map((score, index)=> {return(<div key={index}><ul> <li style={{"color": "black"}}> Test {index + 1}: {score} %</li></ul></div> )})
+    const scores = average.map((score, index)=> {return(<div key={index}><ul> <li style={{"color": "black", "listStyle": "none"}}> Test {index + 1}: {score} %</li></ul></div> )})
  
 
     //This controls the toggle functionality for the button.
